@@ -1,11 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
-# require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
-require "rails/test_unit/railtie"
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -43,5 +41,13 @@ module EdadEditor
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    config.generators do |g|
+      g.orm :mongoid
+      g.template_engine :erb
+      g.test_framework :rspec, :fixture => false, :views => false
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+      g.integration_tool :rspec
+    end
   end
 end
