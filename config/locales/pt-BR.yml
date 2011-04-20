@@ -1,0 +1,13 @@
+pt-BR:
+  mongoid:
+    models:
+      lesson: Aula
+    attributes:
+      lesson:
+        title: "Título"
+        professor: "Professor"
+        course: "Curso"
+  helpers:
+   submit:
+     create: "Criar"
+     update: "Salvar"

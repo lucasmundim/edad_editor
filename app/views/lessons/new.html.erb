@@ -1,0 +1,19 @@
+<h1>Cadastro de Aulas</h1>
+
+<%= form_for(@lesson) do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :professor %>
+    <%= f.text_field :professor %>
+  </p>
+  <p>
+    <%= f.label :course %>
+    <%= f.text_field :course %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

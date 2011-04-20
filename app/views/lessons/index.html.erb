@@ -1,0 +1,10 @@
+<h1>Aulas</h1>
+<p>Cadastre aqui novas aulas</p>
+
+<%= link_to 'Nova aula', new_lesson_path %>
+
+<div id="lessons">
+  <% @lessons.each do |lesson| %>
+    <%= lesson.title %><br />
+  <% end %>
+</div>
